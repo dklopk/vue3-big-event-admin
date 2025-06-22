@@ -68,7 +68,8 @@ export default defineConfig([
 
       // 未定义变量检查
       // 添加未定义变量错误提示，create-vue@3.6.3 关闭，这里加上是为了支持下一个章节演示。
-      'no-undef': 'error'
+      // 'no-undef': 'error',
+      'no-undef': 'off'
     }
   }
 ])
