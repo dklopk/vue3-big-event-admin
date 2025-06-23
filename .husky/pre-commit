@@ -1,6 +1,8 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
+# husky git的钩子工具，可以在特定时机执行特定的命令
+
 # npm test
 # pnpm lint
 pnpm lint-staged

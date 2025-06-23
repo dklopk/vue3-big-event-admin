@@ -1,13 +1,15 @@
 <script setup>
 // import { RouterLink, RouterView } from 'vue-router'
-import IndexVue from '@/components/index.vue'
+// import IndexVue from '@/components/index.vue'
 
-console.log(123)
+// console.log(123)
 </script>
 
 <template>
-  <IndexVue></IndexVue>
-  <RouterView />
+  <div>
+    <!-- <IndexVue></IndexVue> -->
+    <RouterView />
+  </div>
 </template>
 
 <style scoped></style>
