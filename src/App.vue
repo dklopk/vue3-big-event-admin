@@ -1,6 +1,6 @@
 <script setup>
 // import { RouterLink, RouterView } from 'vue-router'
-import IndexVue from '@/components/index.vue'
+// import IndexVue from '@/components/index.vue'
 // import { useUserStore } from './stores/modules/user'
 // import { useCounterStore } from './stores/modules/counter'
 // 由 stores/index.js 统一导出，导入路径统一 `./stores`，而且仓库维护在 stores/modules 中
@@ -28,7 +28,7 @@ const goList = () => {
 
 <template>
   <div>
-    <IndexVue></IndexVue>
+    <!-- <IndexVue></IndexVue> -->
     <hr />
     <router-view></router-view>
     <hr />
