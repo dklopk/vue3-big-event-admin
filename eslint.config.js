@@ -19,7 +19,11 @@ export default defineConfig([
   {
     languageOptions: {
       globals: {
-        ...globals.browser
+        ...globals.browser,
+        // eslintrc 中声明全局变量名,  解决 ElMessage 报错问题
+        ElMessage: 'readonly',
+        ElMessageBox: 'readonly',
+        ElLoading: 'readonly'
       }
     }
   },
