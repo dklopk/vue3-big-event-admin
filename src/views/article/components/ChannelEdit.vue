@@ -83,15 +83,13 @@ defineExpose({
       <el-form-item label="分类名称" prop="cate_name">
         <el-input
           v-model="formModel.cate_name"
-          minlength="1"
-          maxlength="10"
+          placeholder="请输入分类名称"
         ></el-input>
       </el-form-item>
       <el-form-item label="分类别名" prop="cate_alias">
         <el-input
           v-model="formModel.cate_alias"
-          minlength="1"
-          maxlength="15"
+          placeholder="请输入分类别名"
         ></el-input>
       </el-form-item>
     </el-form>
