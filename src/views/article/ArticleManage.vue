@@ -5,6 +5,7 @@ import ChannelSelect from './components/ChannelSelect.vue'
 import { artDelService, artGetListService } from '@/api/article'
 import { formatTime } from '@/utils/format'
 import ArticleEdit from './components/ArticleEdit.vue'
+import ArticleDetail from './components/ArticleDetail.vue'
 // import { ElMessage } from 'element-plus'
 // import { ElMessageBox } from 'element-plus'
 
@@ -18,6 +19,9 @@ const params = ref({
 
 const articleList = ref([]) // 文章列表
 const total = ref(0) // 总条数
+
+// 引用文章预览组件
+const articleDetailRef = ref()
 
 const loading = ref(false) // loading状态
 
@@ -193,7 +197,14 @@ const onSuccess = (type) => {
     <el-table :data="articleList" style="width: 100%" v-loading="loading">
       <el-table-column label="文章标题" width="400">
         <template #default="{ row }">
-          <el-link type="primary" underline="never">{{ row.title }}</el-link>
+          <!-- el-link点击标题后打开预览： -->
+          <el-link
+            type="primary"
+            underline="never"
+            @click="articleDetailRef.open(row)"
+            >{{ row.title }}</el-link
+          >
+          <!-- <el-link type="primary" underline="never">{{ row.title }}</el-link> -->
         </template>
       </el-table-column>
       <el-table-column label="分类" prop="cate_name"></el-table-column>
@@ -242,5 +253,8 @@ const onSuccess = (type) => {
 
     <!-- 弹窗 --><!-- 添加编辑的抽屉 -->
     <article-edit ref="articleEditRef" @success="onSuccess"></article-edit>
+
+    <!-- 文章预览的抽屉 -->
+    <article-detail ref="articleDetailRef"></article-detail>
   </page-container>
 </template>
