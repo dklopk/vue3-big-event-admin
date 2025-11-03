@@ -23,7 +23,9 @@ export default defineConfig([
         // eslintrc 中声明全局变量名,  解决 ElMessage 报错问题
         ElMessage: 'readonly',
         ElMessageBox: 'readonly',
-        ElLoading: 'readonly'
+        ElLoading: 'readonly',
+        // 解决 __dirname 报错问题
+        __dirname: 'readonly'
       }
     }
   },
